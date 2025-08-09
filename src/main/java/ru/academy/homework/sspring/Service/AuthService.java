@@ -27,7 +27,7 @@ public class AuthService {
         );
 
         final UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-        return jwtUtil.generateToken(userDetails);
+        return jwtUtil.generateToken(String.valueOf(userDetails));
     }
 
 }
